@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Convert Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    *{
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+    }
+    .nav-link{
+      color: #000000 !important;
+      background-color: #C2C2C2!important;
+      border-color: #C2C2C2!important;
+    }
+    h4{
+      color: #000 !important;
+    }
+    .form-control:focus {
+        border-color: transparent !important;
+        box-shadow: none !important;
+        border-top: 3px solid #C2C2C2 !important;
+    }
+    .actions{
+      background: #C2C2C2;
+      color: #111;
+      border: 0;
+      padding: 5px 8px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    .actions:hover{
+      background: #434343;
+      color: #fff;
+    }
+    .message{
+      background: #EEE;
+      border-top: 3px solid #208000;
+      padding: 5px 10px;
+      margin-top: 5px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .messages{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="ml-5 mr-5 mt-3 " style="background: #e0e0e0;">
+  <br>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#convert">Convert Case</a>
+    </li>
+    <!--<li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>-->
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content pb-3">
+    <div id="convert" class="container-fluid mt-2 ml-2 tab-pane active">
+      <h4 class="pt-1">Accidentally left the caps lock on and typed something, but can't be bothered to start again and retype it all?</h4>
+      <p>Simply enter your text and choose the case you want to convert it to.</p>
+      <div class="pt-5">
+        <div class="form-group">
+          <textarea class="form-control" onkeyup="count(this)" id="texts" rows="4" style="border-top: 3px solid #C2C2C2;" placeholder="Type or paste your content here"></textarea>
+          <!--<div class="row pt-1">
+            <div class="col-3 col-md-1 p-0 m-0">
+              <div class="actions">
+                Sentence Case
+              </div>
+            </div>
+          </div>-->
+          <div class="messages">
+            <div class="message"></div>
+          </div>
+          <div class="mt-2">
+            <button class="actions" onclick="SentenceCase()">Sentence case</button>
+            <button class="actions" onclick="LowerCase()">lower case</button>
+            <button class="actions" onclick="UpperCase()">UPPER CASE</button>
+            <button class="actions" onclick="CapitalizeCase()">Capitalized Case</button>
+            <button class="actions" onclick="AlterNatingCase()">aLtErNaTiNg cAsE</button>
+            <button class="actions" onclick="CapitalizeCase()">Title Case</button>
+            <button class="actions" onclick="InverseCase()">InVeRsE CaSe</button>
+            <button class="actions" onclick="Download()">Download Text</button>
+            <button class="actions" onclick="CopyToClip()">Copy to Clipboard</button>
+            <button class="actions" onclick="Clear()">Clear</button>
+          </div>
+          <div class="row counts ml-1">
+            Character Count: &nbsp;<span id="char_count">0</span> &nbsp;| Word Count: &nbsp;<span id="word_count">0</span> &nbsp;| Line Count: &nbsp;<span id="line_count">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<div id="menu1" class="container tab-pane fade"><br>
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>-->
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="js/functions.js">
+</script>
+</html>
